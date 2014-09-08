@@ -115,6 +115,7 @@ Pod::Spec.new do |s|
   #  the lib prefix of their name.
   #
 
+   s.requires_arc = true
    s.framework  = "QuartzCore"
   # s.frameworks = "SomeFramework", "AnotherFramework"
 
