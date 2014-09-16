@@ -197,7 +197,7 @@ typedef enum {
     const CGFloat widthHalf = contentSize.width * 0.5f;
     const CGFloat heightHalf = contentSize.height * 0.5f;
     
-    const CGFloat kMargin = 5.f;
+    const CGFloat kMargin = 2.f;
     
     if (heightPlusArrow < (outerHeight - rectY1)) {
     
