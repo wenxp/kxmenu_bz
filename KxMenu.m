@@ -392,7 +392,7 @@ typedef enum {
     const CGFloat kMinMenuItemHeight = 44.f;
     const CGFloat kMinMenuItemWidth = 32.f;
     const CGFloat kMarginX = 10.f;
-    const CGFloat kMarginY = 5.f;
+    const CGFloat kMarginY = 0.f;
     
     UIFont *titleFont = [KxMenu titleFont];
     if (!titleFont) titleFont = [UIFont boldSystemFontOfSize:16];
@@ -517,9 +517,11 @@ typedef enum {
         
         if (itemNum < _menuItems.count - 1) {
             
-            UIImageView *gradientView = [[UIImageView alloc] initWithImage:gradientLine];
-            gradientView.frame = (CGRect){kMarginX * 2, maxItemHeight + 1, gradientLine.size};
-            gradientView.contentMode = UIViewContentModeLeft;
+            UIView *gradientView = [[UIView alloc] init];
+            gradientView.backgroundColor = [UIColor colorWithRed:128/255.0 green:128/255.0 blue:128/255.0 alpha:1];
+            gradientView.frame = (CGRect){kMarginX * 2, maxItemHeight + 1, CGSizeMake(gradientLine.size.width, 0.5)};
+            gradientView.alpha = 0.3;
+            gradientView.contentMode = UIViewContentModeCenter;
             [itemView addSubview:gradientView];
             
             itemY += 2;
