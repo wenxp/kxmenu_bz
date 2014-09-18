@@ -414,7 +414,7 @@ typedef enum {
         const CGSize imageSize = menuItem.image.size;
 
         const CGFloat itemHeight = MAX(titleSize.height, imageSize.height) + kMarginY * 2;
-        const CGFloat itemWidth = (menuItem.image ? maxImageWidth + kMarginX : 0) + titleSize.width + kMarginX * 4;
+        const CGFloat itemWidth = (menuItem.image ? maxImageWidth + 5 : 0) + titleSize.width + kMarginX * 4;
         
         if (itemHeight > maxItemHeight)
             maxItemHeight = itemHeight;
@@ -426,7 +426,7 @@ typedef enum {
     maxItemWidth  = MAX(maxItemWidth, kMinMenuItemWidth);
     maxItemHeight = MAX(maxItemHeight, kMinMenuItemHeight);
 
-    const CGFloat titleX = kMarginX * 2 + (maxImageWidth > 0 ? maxImageWidth + kMarginX : 0);
+    const CGFloat titleX = kMarginX * 2 + (maxImageWidth > 0 ? maxImageWidth + 5 : 0);
     const CGFloat titleWidth = maxItemWidth - titleX - kMarginX;
     
     UIImage *selectedImage = [KxMenuView selectedImage:(CGSize){maxItemWidth, maxItemHeight + 2}];
